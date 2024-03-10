@@ -2,27 +2,38 @@
 
 Created a Phoenix web application (MarineApp) that provides an API for accessing consolidated AIS data reports. The application is configured with an Ecto Repo module, implements HTTP data reception using gun, and follows Elixir best practices.
 
-### Run Migrations
-#### Run migrations to create the necessary database tables:
+## Run Migrations
+### Run migrations to create the necessary database tables:
 
 `
 mix ecto.setup
 `
 
-#### Start the Phoenix server:
+### Start the Phoenix server:
 
 `
 mix phx.server
 `
 
-#### Verify API Endpoint
+### Verify API Endpoint
 `
 curl http://localhost:4000/api/position_reports
 `
 
+## Dependencies
+### Updated mix.exs file to include gun and backoff dependencies:
 
-#### Created the GenServer for HTTP Data Receiver
-##### Created the module for handling HTTP data reception in lib/srt_marine_app/ais_receiver.ex:
+```
+defp deps do
+  [
+    {:gun, "~> 2.0"},
+    {:backoff, "~> 1.0"}
+  ]
+end
+```
+
+### Created the GenServer for HTTP Data Receiver
+#### Created the module for handling HTTP data reception in lib/srt_marine_app/ais_receiver.ex:
 
 ```
 defmodule MarineApp.AISReceiver do
