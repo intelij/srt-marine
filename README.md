@@ -105,7 +105,7 @@ end
 
 ```
 
-Adhered to Elixir's best practices by using pattern matching, immutability, and OTP principles. Provided a Phoenix web application that serves an API for accessing consolidated AIS data reports, with built-in exponential backoff and retry logic to handle service outages gracefully. Additionally, it's optimized for performance using concurrency and OTP principles.
+Tried to adhere to Elixir's best practices by using pattern matching, immutability, and OTP principles. Provided a Phoenix web application that serves an API for accessing consolidated AIS data reports, with built-in exponential backoff and retry logic to handle service outages gracefully. Additionally, it's optimized for performance using concurrency and OTP principles.
 
 
 To enhance security and efficiency in the MarineApp, I could have introduced a few improvements such as implementing CSRF protection, setting up CORS policies, utilizing Elixir's OTP principles for concurrency, and leveraging Phoenix's built-in security features. Additionally, there is room for improvement to ensure proper error handling and logging for better reliability.
